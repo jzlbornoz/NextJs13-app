@@ -1,0 +1,11 @@
+.Header {
+    border: solid 1px white;
+}
+.Navigation {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.Navigation li:hover {
+    color: aqua;
+}
