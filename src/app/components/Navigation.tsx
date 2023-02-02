@@ -9,6 +9,10 @@ const links = [{
 {
     label: 'about',
     root: '/about'
+},
+{
+    label: 'posts',
+    root: '/posts'
 }]
 
 const Navigation = () => {
