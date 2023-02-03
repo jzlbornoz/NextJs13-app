@@ -39,3 +39,21 @@ const PostsPage = async () => {
     )
 }
 ```
+
+## Client Components
+
+- Para indicar que es un client component dentro del directorio app se agrega el siguiente string en la primera linea del codigo. useState y useEfect se usan en los Client Components
+
+```
+'use client' // Indica que es un client component
+import React, { useState } from 'react'
+
+const LikeButton = () => {
+    const [like, setLike] = useState(false);
+    return (
+        <button onClick={() => setLike(!like)}>{like ? 'liked' : 'like'}</button>
+    )
+}
+
+export { LikeButton }
+```

@@ -2,12 +2,13 @@ import { PostsModel } from '@/models/post.model';
 import axios from 'axios'
 import Link from 'next/link';
 import React from 'react'
+import { LikeButton } from '../components/LikeButton';
 
 
 
 const fetchPosts = async () => {
     const { data } = await axios.get<PostsModel[]>('https://jsonplaceholder.typicode.com/posts');
-
+    console.log('fetching');
     return data;
 }
 
@@ -21,7 +22,7 @@ const PostList = async () => {
                         <h3>{post.title}</h3>
                         <p>{post.body}</p>
                     </Link>
-                    <button>Like</button>
+                    <LikeButton />
                 </div>
             ))}</>
         )
