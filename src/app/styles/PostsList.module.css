@@ -1,0 +1,20 @@
+.Post {
+   border: solid 1px red;
+   margin: 10px;
+   padding: 10px;
+   border: cornflowerblue solid 1px;
+   border-radius: 10px;
+}
+.Post h3 {
+    color:cornflowerblue;
+}
+.Post button {
+    background: none;
+    color: cornflowerblue;
+    border: solid 1px cornflowerblue;
+    padding: 3px;
+    border-radius: 3px;
+    width: 60px;
+    justify-content: center;
+    margin-top: 5px;
+}
