@@ -1,7 +1,5 @@
-import React from 'react'
-import { Counter } from '../components/Counter'
 
-const postLayout = ({
+const postsLayout = ({
     children
 }: {
     children: React.ReactNode
@@ -9,10 +7,9 @@ const postLayout = ({
     return (
         <main>
             <h1>PostsPage</h1>
-            <Counter />
             {children}
         </main>
     )
 }
 
-export default postLayout
+export default postsLayout

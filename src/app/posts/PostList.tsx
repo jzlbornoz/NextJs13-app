@@ -1,20 +1,17 @@
 import { PostsModel } from '@/models/post.model';
-import axios from 'axios'
 import Link from 'next/link';
 import React from 'react'
 import { LikeButton } from '../components/LikeButton';
+import { Post } from '../services/Posts.services';
 import styles from '../styles/PostsList.module.css'
 
 
 
-const fetchPosts = async () => {
-    const { data } = await axios.get<PostsModel[]>('https://jsonplaceholder.typicode.com/posts');
-    console.log('fetching');
-    return data;
-}
+
 
 const PostList = async () => {
-    const postList: PostsModel[] = await fetchPosts();
+    const posts = new Post();
+    const postList = await posts.getAllPost();
     if (postList.length > 6) {
         return (
             <>{postList.slice(0, 5).map(post => (
