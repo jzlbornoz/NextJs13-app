@@ -1,13 +1,7 @@
-import { PostsModel } from '@/models/post.model';
 import Link from 'next/link';
-import React from 'react'
 import { LikeButton } from '../components/LikeButton';
 import { Post } from '../services/Posts.services';
 import styles from '../styles/PostsList.module.css'
-
-
-
-
 
 const PostList = async () => {
     const posts = new Post();

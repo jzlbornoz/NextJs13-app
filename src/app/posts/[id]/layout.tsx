@@ -1,6 +1,6 @@
+import { Card } from '@/app/components/Card';
 import { Post } from '@/app/services/Posts.services';
 import { PostsModel } from '@/models/post.model';
-import Link from 'next/link';
 import React from 'react'
 
 const PostByIdPage = async ({ children, params }
@@ -16,9 +16,7 @@ const PostByIdPage = async ({ children, params }
     if (post) {
         return (
             <>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
-                <Link href={`/posts/${post.id}/comments`}>View comments</Link>
+                <Card item={post} />
                 {children}
             </>
         )
