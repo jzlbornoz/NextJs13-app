@@ -1,0 +1,30 @@
+.Card {
+    border: solid 1px var(--primary-color);
+    border-radius: var(--border-radius-card);
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.CardHead {
+    border-bottom: 1px solid var(--light-color);
+}
+
+.CardPost h3,
+.CardPost p {
+    margin-top: 10px;
+}
+
+.Card h3 {
+    color: var(--primary-color);
+}
+
+.Card a{
+    display: flex;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--light-color);
+    width: fit-content;
+}
+
+.Card a :hover{
+    color: var(--primary-color);
+}

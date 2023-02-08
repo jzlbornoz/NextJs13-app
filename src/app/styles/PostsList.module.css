@@ -1,9 +1,10 @@
 .Post {
    border: solid 1px red;
-   margin: 10px;
+   margin: 8vh 0px;
    padding: 10px;
-   border: var(--primary-color) solid 1px;
-   border-radius: 10px;
+   border: var(--light-color) solid 1px;
+   border-radius: var(--border-radius-card);
+   box-shadow: 17px 19px 40px -3px rgba(0,0,0,0.1);
 }
 .Post h3 {
     color:var(--primary-color);

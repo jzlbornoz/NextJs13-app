@@ -1,6 +1,8 @@
 import { Card } from '@/app/components/Card';
 import { Post } from '@/app/services/Posts.services';
+import { UsersService } from '@/app/services/Users.services';
 import { PostsModel } from '@/models/post.model';
+import { UsersModel } from '@/models/users.model';
 import React from 'react'
 
 const PostByIdPage = async ({ children, params }
@@ -10,13 +12,14 @@ const PostByIdPage = async ({ children, params }
     const { id } = params;
     const postInstance = new Post();
     const post: PostsModel = await postInstance.getPostById(id);
+    const userService = new UsersService();
+    const user: UsersModel = await userService.getUserById(post.userId);
     console.log("POST", post);
-
 
     if (post) {
         return (
             <>
-                <Card item={post} />
+                <Card item={post} user={user}/>
                 {children}
             </>
         )
