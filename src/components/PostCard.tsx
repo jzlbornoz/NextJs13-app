@@ -5,9 +5,9 @@ import { UsersModel } from '@/models/users.model';
 
 import placeholder from '../assets/placeholder.jpg'
 
-import styles from '../styles/components/Card.module.css';
+import styles from '../styles/components/PostCard.module.css';
 
-const Card = ({ post, user }: { post: PostsModel, user: UsersModel }) => {
+const PostCard = ({ post, user }: { post: PostsModel, user: UsersModel }) => {
 
 
 
@@ -21,9 +21,9 @@ const Card = ({ post, user }: { post: PostsModel, user: UsersModel }) => {
                 </div>
                 <div className={styles['CardContent-Body']}>{post.body}</div>
             </div>
-            <button>Comments</button>
+            <button><Link href={`/post/${post.id}/comments`}>Comments</Link></button>
         </section>
     )
 }
 
-export { Card }
+export { PostCard }
