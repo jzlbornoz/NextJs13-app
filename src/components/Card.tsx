@@ -1,25 +1,27 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import { PostsModel } from '@/models/post.model';
 import { UsersModel } from '@/models/users.model';
-import Link from 'next/link';
+
+import placeholder from '../assets/placeholder.jpg'
 
 import styles from '../styles/components/Card.module.css';
 
-const Card = (props: { item: PostsModel, user: UsersModel }) => {
+const Card = ({ post, user }: { post: PostsModel, user: UsersModel }) => {
 
-    const post = props.item;
-    const user = props.user;
+
 
     return (
         <section className={styles.Card}>
-            <div className={styles.CardHead}>
-                <p>{user.name}</p>
+            <div className={styles.CardContent}>
+                <Image src={placeholder} alt={`Image ${post.title}`} width={250} />
+                <div className={styles['CardContent-Header']}>
+                    <h2>{post.title}</h2>
+                    <h4>By: {user.username}</h4>
+                </div>
+                <div className={styles['CardContent-Body']}>{post.body}</div>
             </div>
-            <div className={styles.CardPost}>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
-                <Link href={`/posts/${post.id}/comments`}> <p>View comments </p></Link>
-            </div>
-
+            <button>Comments</button>
         </section>
     )
 }

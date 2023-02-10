@@ -1,6 +1,5 @@
 .Header {
     display: flex;
-    border: solid 1px red;
     height: 10vh;
     width: 100vw;
     align-items: center;

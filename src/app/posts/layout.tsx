@@ -5,7 +5,6 @@ const postsLayout = ({
 }) => {
     return (
         <main>
-            <h1>PostsPage</h1>
             {children}
         </main>
     )

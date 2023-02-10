@@ -1,30 +1,41 @@
 .Card {
-    border: solid 1px var(--primary-color);
-    border-radius: var(--border-radius-card);
-    margin: 10px 0px;
+    margin-top: 5vh;
+}
+
+.CardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.CardContent-Header {
+    border: var(--light-color) solid 1px;
+    border-top: none;
+    padding: 10px;
+}
+.CardContent-Header h4{
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.CardContent-Body {
+    border: var(--light-color) solid 1px;
+    border-top: none;
     padding: 10px;
 }
 
-.CardHead {
-    border-bottom: 1px solid var(--light-color);
+.CardContent img {
+    border: var(--light-color) solid 1px;
+    border-bottom: none;
+    width: 100%;
 }
 
-.CardPost h3,
-.CardPost p {
-    margin-top: 10px;
-}
-
-.Card h3 {
-    color: var(--primary-color);
-}
-
-.Card a{
-    display: flex;
-    margin-top: 10px;
-    border-bottom: 1px solid var(--light-color);
-    width: fit-content;
-}
-
-.Card a :hover{
-    color: var(--primary-color);
+.Card button {
+    padding: 10px 25px;
+    margin-left: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
 }

@@ -10,16 +10,19 @@ const PostByIdPage = async ({ children, params }
     : Promise<JSX.Element> => {
 
     const { id } = params;
+
     const postInstance = new Post();
     const post: PostsModel = await postInstance.getPostById(id);
+
     const userService = new UsersService();
     const user: UsersModel = await userService.getUserById(post.userId);
-    console.log("POST", post);
 
+
+    //--
     if (post) {
         return (
             <>
-                <Card item={post} user={user}/>
+                <Card post={post} user={user} />
                 {children}
             </>
         )
