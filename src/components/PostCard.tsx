@@ -21,7 +21,6 @@ const PostCard = ({ post, user }: { post: PostsModel, user: UsersModel }) => {
                 </div>
                 <div className={styles['CardContent-Body']}>{post.body}</div>
             </div>
-            <button><Link href={`/post/${post.id}/comments`}>Comments</Link></button>
         </section>
     )
 }
