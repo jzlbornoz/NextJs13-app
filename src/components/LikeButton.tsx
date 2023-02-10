@@ -1,4 +1,4 @@
-'use client' // Indica que es un client component
+'use client'// Indica que es un client component
 import React, { useState } from 'react'
 
 const LikeButton = () => {

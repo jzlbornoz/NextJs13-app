@@ -5,8 +5,7 @@ export class Post {
   private api = "https://jsonplaceholder.typicode.com/posts";
 
   async getAllPost(): Promise<PostsModel[]> {
-    const { data } = await axios.get<PostsModel[]>(this.api);
-    return data;
+    return fetch(this.api).then((res) => res.json());
   }
   async getPostById(id: PostsModel["id"] | string[] = 1): Promise<PostsModel> {
     const { data } = await axios.get<PostsModel>(`${this.api}/${id}`);

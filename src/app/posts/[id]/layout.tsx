@@ -1,6 +1,6 @@
-import { Card } from '@/app/components/Card';
-import { Post } from '@/app/services/Posts.services';
-import { UsersService } from '@/app/services/Users.services';
+import { Card } from '@/components/Card';
+import { Post } from '@/services/Posts.services';
+import { UsersService } from '@/services/Users.services';
 import { PostsModel } from '@/models/post.model';
 import { UsersModel } from '@/models/users.model';
 import React from 'react'

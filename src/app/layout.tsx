@@ -1,5 +1,5 @@
-import { Navigation } from "./components/Navigation"
-import './styles/globals.css';
+import { Header } from "../components/Header"
+import '../styles/globals.css';
 
 
 
@@ -14,7 +14,7 @@ export default function RootLayout({
         <title>MyApp</title>
       </head>
       <body>
-        <Navigation />
+        <Header />
         {children}
       </body>
     </html>

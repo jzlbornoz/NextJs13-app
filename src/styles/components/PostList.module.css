@@ -1,10 +1,28 @@
+.PostList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.PostListTitle{
+    margin-top: 5vh;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .Post {
-   border: solid 1px red;
-   margin: 8vh 0px;
-   padding: 10px;
+   padding: 15px;
    border: var(--light-color) solid 1px;
-   border-radius: var(--border-radius-card);
    box-shadow: 17px 19px 40px -3px rgba(0,0,0,0.1);
+   margin: 10px 5vw;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.Post h2 {
+    white-space: nowrap;
+}
+.PostList a{
+    width: 70%;
 }
 .Post h3 {
     color:var(--primary-color);
