@@ -10,9 +10,6 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
-        <title>MyApp</title>
-      </head>
       <body>
         <Header />
         {children}

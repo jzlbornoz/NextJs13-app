@@ -12,7 +12,6 @@ const PostList = async () => {
     es decir que el cliente no recibe informacion de mas */
     return (
         <section className={styles.PostList}>
-            <h2 className={styles.PostListTitle}>Most Popular</h2>
             {postList.slice(0, 15).map(post => {
                 return (
                     <article key={post.id} className={styles.Post}>
