@@ -1,7 +1,8 @@
-import { Loading } from "@/components/Loading";
+import { LoadingComponent } from "@/components/LoadingComponent";
 
-export default function loading() {
+
+export default function Loading() {
     return (
-        <Loading />
+        <LoadingComponent />
     )
 }

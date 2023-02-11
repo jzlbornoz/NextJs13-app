@@ -8,10 +8,9 @@ import styles from '../styles/components/Comments.module.css';
 
 
 
-const CommentList = async () => {
-
+const CommentList = async ({ postId }: { postId: number }) => {
     const service = new API<CommentsModel>();
-    const comments = await service.getAllComments();
+    const comments = await service.getAllComments(postId);
     return (
         <section className={styles.Comments}>
             {comments.map(item => (
