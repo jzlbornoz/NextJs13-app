@@ -3,6 +3,7 @@ import axios from "axios";
 export class API<T> {
   private api = "https://jsonplaceholder.typicode.com/posts";
   private apiUser = "https://jsonplaceholder.typicode.com/users";
+  private UnsplashApiToken = "rg1RaWSdnkeGVtnxIjr0nMqrLoX5R-NDyzpH-JPqfFo";
 
   //Post
   async getAllPost(): Promise<T[]> {
@@ -25,5 +26,15 @@ export class API<T> {
     return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
       cache: "no-store",
     }).then((res) => res.json());
+  }
+
+  //Images
+  async getImage(): Promise<T> {
+    return fetch(
+      `https://api.unsplash.com/photos/random/?client_id=${this.UnsplashApiToken} `,
+      {
+        cache: "no-store",
+      }
+    ).then((res) => res.json());
   }
 }

@@ -7,14 +7,14 @@ import placeholder from '../assets/placeholder.jpg'
 
 import styles from '../styles/components/PostCard.module.css';
 
-const PostCard = ({ post, user }: { post: PostsModel, user: UsersModel }) => {
+const PostCard = ({ post, user, image }: { post: PostsModel, user: UsersModel, image: string }) => {
 
 
 
     return (
         <section className={styles.Card}>
             <div className={styles.CardContent}>
-                <Image src={placeholder} alt={`Image ${post.title}`} width={250} />
+                <Image src={image} alt={`Image ${post.title}`} width={250} height={250}/>
                 <div className={styles['CardContent-Header']}>
                     <h2>{post.title}</h2>
                     <h4>By: {user.username}</h4>
