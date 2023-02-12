@@ -1,4 +1,4 @@
-import axios from "axios";
+import { ImagesModel } from "@/models/image.model";
 
 export class API<T> {
   private api = "https://jsonplaceholder.typicode.com/posts";
@@ -27,14 +27,10 @@ export class API<T> {
       cache: "no-store",
     }).then((res) => res.json());
   }
-
   //Images
-  async getImage(): Promise<T> {
+  async getImage(): Promise<ImagesModel> {
     return fetch(
-      `https://api.unsplash.com/photos/random/?client_id=${this.UnsplashApiToken} `,
-      {
-        cache: "no-store",
-      }
+      `https://api.unsplash.com/photos/random/?client_id=${this.UnsplashApiToken}`
     ).then((res) => res.json());
   }
 }

@@ -4,6 +4,9 @@ import styles from '../styles/components/PostList.module.css';
 import { API } from '@/services/API.services';
 import { PostsModel } from '@/models/post.model';
 
+
+
+
 const PostList = async () => {
     const APIservice = new API<PostsModel>();
     const postList = await APIservice.getAllPost();
@@ -14,7 +17,7 @@ const PostList = async () => {
         <section className={styles.PostList}>
             {postList.slice(0, 15).map(post => {
                 return (
-                    <article key={post.id} className={styles.Post}>
+                    <article key={post.id} className={styles.Post} >
                         <Link href={`/post/${post.id}`}>
                             <h2>{post.title.length > 18 ? `${post.title.slice(0, 18).trimEnd()}...` : post.title}</h2>
                             <p>{post.body.slice(0, 28)}...</p>
