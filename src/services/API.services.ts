@@ -28,9 +28,16 @@ export class API<T> {
     }).then((res) => res.json());
   }
   //Images
-  async getImage(): Promise<ImagesModel> {
-    return fetch(
+  async getImage() {
+    const res = await fetch(
       `https://api.unsplash.com/photos/random/?client_id=${this.UnsplashApiToken}`
-    ).then((res) => res.json());
+    );
+
+    if (!res.ok) {
+      return "https://api.lorem.space/image?w=800&h=800";
+    }
+
+    const unsplashImage: Promise<ImagesModel> = res.json();
+    return (await unsplashImage).urls.small;
   }
 }

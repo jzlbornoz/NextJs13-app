@@ -23,10 +23,11 @@ const PostByIdPage = async ({ children, params }
     const ImageAPIService = new API<ImagesModel>();
     const image = await ImageAPIService.getImage();
 
+
     //--
     return (
         <>
-            <PostCard post={Post} user={User} image={image.urls.small} />
+            <PostCard post={Post} user={User} image={image} />
             {children}
         </>
     )
