@@ -9,17 +9,19 @@ import { UsersModel } from '@/models/users.model';
 import styles from '../styles/components/PostCard.module.css';
 
 import { motion } from 'framer-motion';
+import { Suspense } from 'react';
+import { LoadingComponent } from './LoadingComponent';
 
 const PostCard = ({ post, user, image }: { post: PostsModel, user: UsersModel, image: string }) => {
 
 
     const container = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0.4 },
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                staggerDirection: -1
+                staggerChildren: 0.18,
+                staggerDirection: 1
             }
         }
     }
@@ -38,13 +40,15 @@ const PostCard = ({ post, user, image }: { post: PostsModel, user: UsersModel, i
         >
             <div className={styles.CardContent}>
                 <motion.div variants={item}>
-                    <Image src={image} alt={`Image ${post.title}`} width={200} height={200} placeholder = 'empty' />
+                    <Suspense fallback={<LoadingComponent />}>
+                        <Image src={image} alt={`Image ${post.title}`} width={200} height={200} />
+                    </Suspense>
                 </motion.div>
                 <div className={styles['CardContent-Header']} >
                     <motion.h2 variants={item}>{post.title}</motion.h2>
                     <motion.h4 variants={item}>By: {user.username}</motion.h4>
                 </div>
-                <div className={styles['CardContent-Body']}>{post.body}</div>
+                <motion.div variants={item} className={styles['CardContent-Body']}>{post.body}</motion.div>
             </div>
         </motion.section>
     )

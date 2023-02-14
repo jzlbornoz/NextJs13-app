@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 const CommentsCard = ({ comment }: { comment: CommentsModel }) => {
 
     const container = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0.4 },
         show: {
             opacity: 1,
             transition: {

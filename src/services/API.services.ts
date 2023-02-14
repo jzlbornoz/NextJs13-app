@@ -33,11 +33,10 @@ export class API<T> {
       `https://api.unsplash.com/photos/random/?client_id=${this.UnsplashApiToken}`
     );
 
-    if (!res.ok) {
-      return "https://api.lorem.space/image?w=800&h=800";
+    if (res.ok) {
+      const unsplashImage: Promise<ImagesModel> = res.json();
+      return (await unsplashImage).urls.small;
     }
-
-    const unsplashImage: Promise<ImagesModel> = res.json();
-    return (await unsplashImage).urls.small;
+    return "https://api.lorem.space/image?w=800&h=800";
   }
 }

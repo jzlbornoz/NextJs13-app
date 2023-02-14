@@ -1,0 +1,36 @@
+.PostCardMini {
+    padding: 20px;
+    border: var(--light-color) solid 1px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    margin: 10px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PostCardMini:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.PostCardMini h2,
+.PostCardMini p {
+    white-space: nowrap;
+}
+
+.PostCardMiniList a {
+    width: 70%;
+}
+
+.PostCardMini h3 {
+    color: var(--primary-color);
+}
+
+.PostCardMini button {
+    background: none;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    padding: 3px;
+    width: 60px;
+    justify-content: center;
+    margin-top: 5px;
+}

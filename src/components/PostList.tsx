@@ -1,9 +1,10 @@
-import Link from 'next/link';
-import { LikeButton } from './LikeButton';
 import styles from '../styles/components/PostList.module.css';
 import { API } from '@/services/API.services';
 import { PostsModel } from '@/models/post.model';
+import { PostCardMini } from './PostCardMini';
 
+import { Suspense } from 'react'
+import { LoadingComponent } from '@/components/LoadingComponent'
 
 
 
@@ -17,13 +18,9 @@ const PostList = async () => {
         <section className={styles.PostList}>
             {postList.slice(0, 15).map(post => {
                 return (
-                    <article key={post.id} className={styles.Post} >
-                        <Link href={`/post/${post.id}`}>
-                            <h2>{post.title.length > 18 ? `${post.title.slice(0, 18).trimEnd()}...` : post.title}</h2>
-                            <p>{post.body.slice(0, 28)}...</p>
-                        </Link>
-                        <LikeButton />
-                    </article>
+                    <Suspense fallback={<LoadingComponent />} key={post.id}>
+                        <PostCardMini post={post} key={post.id} />
+                    </Suspense>
                 )
             })}
         </section>
