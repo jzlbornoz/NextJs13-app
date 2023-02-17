@@ -1,41 +1,41 @@
-#Postify
-- App with new NextJs v13 features
+# Postify App
+Esta aplicación fue desarrollada en Next.js 13 y utiliza su nuevo sistema de rutas. La aplicación muestra una lista de publicaciones con información de usuario y comentarios obtenidos de una API.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Funcionalidades
+- Mostrar una lista de publicaciones con título, contenido y nombre de usuario.
+- Mostrar una lista de comentarios asociados a cada publicación.
+- Utilizar el nuevo componente LoadingUI de Next.js 13 para mostrar una pantalla de carga mientras se obtienen los datos de la API.
+- Utilizar el nuevo componente ErrorUI de Next.js 13 para mostrar un mensaje de error en caso de que no se puedan obtener los datos de la API.
+- Utilizar el componente React.Suspense para mostrar una pantalla de carga mientras se cargan los componentes de manera asíncrona.
 
-## Getting Started
-
-First, run the development server:
-
+## Instalación
+Para instalar la aplicación, siga los siguientes pasos:
 ```bash
+# Clonar el repositorio en su máquina local
+git clone https://github.com/username/post-app.git
+
+# Navegar hasta el directorio de la aplicación
+cd post-app
+
+# Instalar las dependencias del proyecto
+npm install
+
+# Iniciar la aplicación
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# Abrir un navegador web y visitar la siguiente URL: http://localhost:3000
 ```
+## Uso
+Una vez que la aplicación esté en funcionamiento, se mostrará una lista de publicaciones con información de usuario y comentarios. Si los datos tardan en cargarse, se mostrará una pantalla de carga utilizando el nuevo componente LoadingUI de Next.js 13. Si hay algún error al cargar los datos de la API, se mostrará un mensaje de error utilizando el nuevo componente ErrorUI de Next.js 13.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para ver los comentarios asociados a una publicación, simplemente haga clic en el botón "Mostrar comentarios" debajo de la publicación correspondiente. Si los comentarios tardan en cargarse, se mostrará una pantalla de carga utilizando el componente React.Suspense.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contribuyendo
+Si desea contribuir a la aplicación, puede hacerlo de la siguiente manera:
+- Crear un nuevo issue describiendo el problema o la funcionalidad que desea agregar.
+- Hacer un fork del repositorio y crear una nueva rama con el nombre de la issue.
+- Hacer los cambios necesarios y hacer un pull request hacia la rama principal del repositorio.
+- Esperar a que se revise el pull request y se haga la fusión en caso de ser aprobado.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Licencia
+Esta aplicación se distribuye bajo la licencia MIT. Consulte el archivo LICENSE para obtener más información.
