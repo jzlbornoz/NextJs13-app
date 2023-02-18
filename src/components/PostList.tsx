@@ -1,7 +1,7 @@
 import styles from '../styles/components/PostList.module.css';
 import { API } from '@/services/API.services';
 import { PostsModel } from '@/models/post.model';
-import { PostCardMini } from './PostCardMini';
+import { PostCardMini } from './client/PostCardMini';
 
 import { Suspense } from 'react'
 import { LoadingComponent } from '@/components/LoadingComponent'

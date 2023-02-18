@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { LikeButton } from './LikeButton'
 import { PostsModel } from '@/models/post.model'
 
-import styles from '../styles/components/PostCardMini.module.css';
+import styles from '../../styles/components/PostCardMini.module.css';
 import { motion } from 'framer-motion';
 
 const PostCardMini = ({ post, key }: { post: PostsModel, key: PostsModel['id'] }) => {

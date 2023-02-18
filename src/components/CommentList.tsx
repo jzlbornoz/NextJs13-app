@@ -1,4 +1,4 @@
-import { CommentsCard } from "../components/CommentsCard"
+import { CommentsCard } from "./client/CommentsCard"
 
 import { CommentsModel } from "../models/comments.model";
 

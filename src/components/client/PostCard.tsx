@@ -6,11 +6,11 @@ import { PostsModel } from '@/models/post.model';
 import { UsersModel } from '@/models/users.model';
 
 
-import styles from '../styles/components/PostCard.module.css';
+import styles from '../../styles/components/PostCard.module.css';
 
 import { motion } from 'framer-motion';
 import { Suspense } from 'react';
-import { LoadingComponent } from './LoadingComponent';
+import { LoadingComponent } from '../LoadingComponent';
 
 const PostCard = ({ post, user, image }: { post: PostsModel, user: UsersModel, image: string }) => {
 

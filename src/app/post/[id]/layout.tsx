@@ -1,4 +1,4 @@
-import { PostCard } from '@/components/PostCard';
+import { PostCard } from '@/components/client/PostCard';
 
 import { PostsModel } from '@/models/post.model';
 import { UsersModel } from '@/models/users.model';

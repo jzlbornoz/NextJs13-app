@@ -4,8 +4,8 @@ import { CommentsModel } from '@/models/comments.model'
 import Image from 'next/image';
 import React from 'react'
 
-import styles from '../styles/components/CommentCard.module.css';
-import placeholder from '../assets/placeholder.jpg'
+import styles from '../../styles/components/CommentCard.module.css';
+import placeholder from '../../assets/placeholder.jpg'
 import { motion } from 'framer-motion';
 
 
