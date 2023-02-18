@@ -21,9 +21,9 @@ const Header = () => {
         <header className={styles.Header}>
             {MenuState.menuIsOpen ? <Menu /> : null}
             {!MenuState.menuIsOpen
-                ? <FontAwesomeIcon icon={faBars} onClick={() => toggleMenu()} />
+                ? <FontAwesomeIcon icon={faBars} onClick={() => toggleMenu()} width={35} />
                 : null}
-                <FontAwesomeIcon icon={faUserCircle} />
+                <FontAwesomeIcon icon={faUserCircle} width={35}/>
         </header>
     )
 }
