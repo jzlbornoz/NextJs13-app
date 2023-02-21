@@ -11,7 +11,7 @@ export default async function Home() {
         'margin-top': '5vh', 'text-align': 'center',
         'margin-bottom': '20px'
       }}>Most Popular</h2>
-        <PostList />
+      <PostList />
     </main>
   )
 }
