@@ -1,5 +1,12 @@
-'use client'
+"use client";
 import { createContext } from "react";
 
-export  const AppContext = createContext({
-});
+export type AppContextProps = {
+  menuState: {
+    orderIsOpen: boolean;
+    menuIsOpen: boolean;
+  };
+  toggleMenu: () => void;
+};
+
+export const AppContext = createContext<AppContextProps>({} as AppContextProps);

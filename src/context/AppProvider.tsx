@@ -1,4 +1,5 @@
 'use client'
+import useInitialState from '@/hooks/useInitialState';
 import React from 'react'
 import { AppContext } from './AppContex'
 
@@ -7,8 +8,9 @@ interface AppProviderProps {
 }
 
 export const AppProvider = ({ children }: AppProviderProps) => {
+    const initialState = useInitialState();
     return (
-        <AppContext.Provider value={{}}>
+        <AppContext.Provider value={initialState}>
             {children}
         </AppContext.Provider>
     )

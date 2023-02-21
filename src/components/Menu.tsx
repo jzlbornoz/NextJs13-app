@@ -1,16 +1,18 @@
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import style from '../styles/components/Menu.module.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { AppContext } from '@/context/AppContex';
 
 const Menu = () => {
+    const { toggleMenu } = useContext(AppContext);
     return (
         <section className={style.Menu}>
             <div className={style['Menu-Header']}>
-                <FontAwesomeIcon icon={faArrowLeft} />
+                <FontAwesomeIcon icon={faArrowLeft} onClick={() => toggleMenu()}/>
                 <Image src='https://api.lorem.space/image/house?w=800&h=800' alt='user' width={250} height={230}
                     className={style['Menu-Header-Background']}
                 />
