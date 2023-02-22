@@ -9,11 +9,11 @@ import { AppContext } from '@/context/AppContex';
 
 
 const Header = () => {
-    const { menuState, toggleMenu } = useContext(AppContext);
+    const { appState, toggleMenu } = useContext(AppContext);
     return (
         <header className={styles.Header}>
-            {menuState.menuIsOpen ? <Menu /> : null}
-            {!menuState.menuIsOpen
+            {appState.menuIsOpen ? <Menu /> : null}
+            {!appState.menuIsOpen
                 ? <FontAwesomeIcon icon={faBars} onClick={() => toggleMenu()} width={35} />
                 : null}
             <FontAwesomeIcon icon={faUserCircle} width={35} />
