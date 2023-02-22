@@ -19,7 +19,7 @@ const PostList = async () => {
             {postList.slice(0, 15).map(post => {
                 return (
                     <Suspense fallback={<LoadingComponent />} key={post.id}>
-                        <PostCardMini post={post} key={post.id} />
+                        <PostCardMini post={post} />
                     </Suspense>
                 )
             })}

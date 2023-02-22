@@ -7,7 +7,7 @@ import { PostsModel } from '@/models/post.model'
 import styles from '../../styles/components/PostCardMini.module.css';
 import { motion } from 'framer-motion';
 
-const PostCardMini = ({ post, key }: { post: PostsModel, key: PostsModel['id'] }) => {
+const PostCardMini = ({ post }: { post: PostsModel }) => {
 
     const container = {
         hidden: { opacity: 0.4 },

@@ -1,11 +1,14 @@
 
 import Image from 'next/image'
+import Link from 'next/link';
 import React, { useContext } from 'react'
-import style from '../styles/components/Menu.module.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle, faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '@/context/AppContex';
+
+import { faUserCircle, faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import style from '../styles/components/Menu.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Menu = () => {
     const { toggleMenu } = useContext(AppContext);
@@ -30,7 +33,7 @@ const Menu = () => {
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faHeart} />
-                    <p>Liked Posts</p>
+                    <Link href='/favorites' onClick={() => toggleMenu()}><p>Liked Posts</p></Link>
                 </li>
             </ul>
             <h4>Postify</h4>
