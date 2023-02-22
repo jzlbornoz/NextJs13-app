@@ -12,7 +12,7 @@ const Menu = () => {
     return (
         <section className={style.Menu}>
             <div className={style['Menu-Header']}>
-                <FontAwesomeIcon icon={faArrowLeft} onClick={() => toggleMenu()}/>
+                <FontAwesomeIcon icon={faArrowLeft} onClick={() => toggleMenu()} />
                 <Image src='https://api.lorem.space/image/house?w=800&h=800' alt='user' width={250} height={230}
                     className={style['Menu-Header-Background']}
                 />

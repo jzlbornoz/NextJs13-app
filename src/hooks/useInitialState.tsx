@@ -5,10 +5,12 @@ import { useState } from 'react';
 const initialState = {
     orderIsOpen: false,
     menuIsOpen: false,
+    favorites: []
 };
 
 const useInitialState = () => {
     const [menuState, setMenuState] = useState(initialState);
+    const [favorites, setFavorites] = useState(initialState)
 
     const toggleMenu = () => {
         setMenuState({
